@@ -36,3 +36,30 @@
         transform: rotate(360deg);
     }
 }
+
+.container {
+  margin-right: 8rem;
+  margin-left: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.apropos_text {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+.divProjets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.divProjet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
