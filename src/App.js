@@ -1,94 +1,65 @@
 import Layout from './components/layout/layout'
-import Projet from './components/projet'
+import Section from './components/layout/section'
+import Apropos from './components/layout/apropos'
+import Formation from './components/layout/formation'
+import Experience from './components/layout/experience'
+import Projet from './components/layout/projet'
+import Lien from './components/layout/lien'
 import logo from './logo.svg'
+import logoHorizon from './logo_horizon.png'
+import logoAzur from './logo_azur.png'
 import './App.css'
 
 function App() {
   return (
     <div className='App'>
-      {/* <header className='App-header'>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png'
-          className='App-logo'
-          alt='logo'
-        />
-        <p>LOGOOOOOOOOOOOO</p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div className="container mb-3">
 
-      <div className="container">
-
-        {/* <div class="apropos">
-          <h1 class="titreSection">À propos de moi</h1>
-          <div>
-            <p class="apropos_text">
-              Je me présente, moi c'est <span class="couleur">Raphaël Tisba</span>, j'ai 21 ans. Ma passion pour les jeux-vidéo et l'informatique en général m'ont permis de découvrir la programmation et le développement web.
+        <Section className="divPerso" titre="À PROPOS DE MOI">
+          <Apropos>
+            <p className="apropos_text">
+              Je me présente, moi c'est <span className="couleur">Raphaël Tisba</span>, j'ai 21 ans. Ma passion pour les jeux-vidéo et l'informatique en général m'ont permis de découvrir la programmation et le développement web.
             </p>
-            <p class="apropos_text">
-              Je suis actuellement en 1ère année de <span class="couleur">Bachelor</span> (Fullstack & DevOps) à l'école <span class="couleur">IPSSI</span> de Saint-Quentin en Yvelines.
+            <p className="apropos_text">
+              Je suis actuellement en <span className="couleur">Bachelor</span> (Fullstack & DevOps) à l'école <span className="couleur">IPSSI</span> de Saint-Quentin en Yvelines.
             </p>
-            <p class="apropos_text">
+            <p className="apropos_text">
               Je compte bien poursuivre mes études au-delà du BTS et continuer ma formation tout en gardant un pied dans le milieu professionnel.
             </p>
-          </div>
+          </Apropos>
+        </Section>
 
-          <div class="formation">
-            <h1 class="titreSection">Formations</h1>
-            <div>
-              <p>BAC STI2D - Lycée Émilie de Breteuil</p>
-              <p>BTS SIO - École IPSSI</p>
+        <Section className="divFormation" titre="Formation">
+          <Formation annee="2019" diplome="BAC STI2D" etablissement="Lycée Émilie de Breteuil"></Formation>
+          <Formation annee="2020-2022" diplome="BTS SIO" etablissement="École IPSSI SQY"></Formation>
+        </Section>
+
+        <Section className="divExperience" titre="Expériences">
+          <Experience dateDebut="10/05/2020" dateFin="02/07/2020" typeExperience="Stage" nomEntreprise="Affinisoft" adresseEntreprise="Argenteuil" codePostale="95018">
+            <div className='gras'>
+              <span className="couleur">Environnement technique : </span> HTML, CSS, Drupal 8, PHP, Twig
             </div>
-          </div>
-
-          <div class="experiences">
-            <h1 class="titreSection">Expériences</h1>
-            <div>
-              <p>STAGE CHEZ AFFINISOFT - 8 SEMAINES</p>
-              <div>Environnement technique : HTML, CSS, Drupal 8, PHP, Twig</div>
-              <p>ALTERNANCE AU CYCLOTRON/ENEDIS LAB - 1 AN</p>
-              <div>Environnement technique : HTML, CSS, PHP, jQuery, Doctrine</div>
+          </Experience>
+          <Experience dateDebut="13/09/2021" dateFin="29/07/2022" typeExperience="Alternance" nomEntreprise="Cyclotron/Enedis Lab" adresseEntreprise="Puteaux" codePostale="92800">
+            <div className='gras'>
+              <span className="couleur">Environnement technique : </span> HTML, CSS, PHP, jQuery, Doctrine
             </div>
-          </div>
+          </Experience>
+        </Section>
 
-          <div class="">
-            <h1 class="titreSection"></h1>
-            <div>
+        <Section className="divProjets" titre="Projets">
+          <Projet nom="Projet" img={logo} lien="https://google.com" />
+          <Projet nom="Azur" img={logoAzur} lien="https://github.com/r-tisba/azur_web" />
+          <Projet nom="Horizon" img={logoHorizon} lien="https://github.com/PA-Azur/horizon" />
+          <Projet nom="Syvios" img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png" lien="https://google.com" />
+          <Projet nom="AAA" img="https://www.netcom-informatique.fr/wp-content/uploads/2020/06/cropped-Netcom-logo-sigle.png" lien="https://google.com" />
+        </Section>
 
-            </div>
-          </div>
-
-          <div class="liens">
-            <h1 class="titreSection">Liens</h1>
-            <div>
-              <a href="https://www.linkedin.com/in/rapha%C3%ABl-tisba-422071206/" class="icone_linkedin" target="_blank">
-                LinkedIn
-              </a>
-              <br></br>
-              <a href="https://github.com/r-tisba" class="icone_github" target="_blank">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div> */}
-
-        <Layout>
-          Je suis dans la balise main
-        </Layout>
-
-        <div className='divProjets'>
-          <Projet nom="Projet1" img={logo} lien="https://google.com" />
-          <Projet nom="Projet2" img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png" lien="https://google.com" />
-          <Projet nom="Projet3" img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png" lien="https://google.com" />
-          <Projet nom="Projet4" img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png" lien="https://google.com" />
-          <Projet nom="Projet5" img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Aperture_Science_Logo.svg/1200px-Aperture_Science_Logo.svg.png" lien="https://google.com" />
-        </div>
+        <Section className="divLiens" titre="Liens">
+          <Lien lien="https://www.linkedin.com/in/rapha%C3%ABl-tisba-422071206/" nom="LinkedIn"></Lien>
+          <Lien lien="https://github.com/r-tisba" nom="GitHub"></Lien>
+          <Lien lien="mailto:r.tisba@ecole-ipssi.net" nom="Mail"></Lien>
+        </Section>
 
       </div>
     </div>
